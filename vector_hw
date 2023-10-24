@@ -1,0 +1,11 @@
+#include <iostream>
+#include <array>
+#include <vector>
+using namespace std;
+
+#define tab "\t" 
+#define dstring "\n////////////////////////////////\n\n" 
+
+template <typename T> void vector_properties(const std::vector<T>& vec) 
+{
+  cout << "Size:\t" << vec.size() << endl;
