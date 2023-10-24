@@ -9,3 +9,17 @@ using namespace std;
 template <typename T> void vector_properties(const std::vector<T>& vec) 
 {
   cout << "Size:\t" << vec.size() << endl;
+  cout << "Capacity:\t" << vec.capacity() << endl;
+  cout << "Max.size:\t" << vec.max_size() << endl;
+} 
+template <typename T> void vector_extra_number(std::vector<T>& vec) 
+{
+  //emplace & erase я нашёл случайно. потом разобрался что с ними делать 
+  auto = add_iter = vec.begin(); // итератор, стоящий в начале вектора 
+  int place; // место куда добавить число 
+  float number; // число пользователя
+} 
+
+
+
+
