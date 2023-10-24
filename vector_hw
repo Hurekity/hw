@@ -18,7 +18,52 @@ template <typename T> void vector_extra_number(std::vector<T>& vec)
   auto = add_iter = vec.begin(); // итератор, стоящий в начале вектора 
   int place; // место куда добавить число 
   float number; // число пользователя
+  cout << "Write a place where u wanna add number: "; cin >> place;
+  cout << "Also write ur number: "; cin >> number;
+  vec.emplace(add_iter + place, number);
 } 
+template <typename T> void vector_remove_number(std::vector<T>& vec) 
+{
+  auto remove_iter = vec.begin();
+  int place;
+  cout << "Write a place where u wanna delete number: "; cin >> place;
+  vec.erase(remove_iter + place);
+} 
+template <typename T> void print_vector(const std::vector<T>& vec) 
+{
+for (int i = 0; i < vec.size(); i++)
+   {
+      cout << vec[i] << endl;
+   } 
+} 
+
+void main() 
+{
+  std::vector<float> vec = { 0,1,1,2,3,5,8,13,21,34 }; // swap int to float if need or conversely
+  print_vector(vec);
+  cout << endl;
+  vector_properties(vec);
+  cout << endl;
+  vec.push_back(55);
+  print_vector(vec);
+  cout << endl;
+  vector_properties(vec);
+
+//////////////////////
+
+  cout << dstring;
+  vector_extra_number(vec);
+  print_vector(vec);
+  cout << endl;
+  vector_properties(vec);
+
+//////////////////////
+
+  cout << dstring;
+  vector_remove_number(vec);
+  print_vector(vec);
+  cout << endl;
+  vector_properties(vec);
 
 
 
